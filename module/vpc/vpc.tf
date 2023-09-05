@@ -26,13 +26,13 @@ resource "aws_subnet" "nkwo_vpc_public_subnet_1" {
   }
 }
 #public Subnet 2
-resource "aws_subnet" "levelup_vpc_public_subnet_2" {
-  vpc_id     = aws_vpc.levelup_vpc.id
-  cidr_block = var.LEVELUP_VPC_PUBLIC_SUBNET2_CIDR_BLOCK
+resource "aws_subnet" "nkwo_vpc_public_subnet_2" {
+  vpc_id     = aws_vpc.nkwo_vpc.id
+  cidr_block = var.NKWO_VPC_PUBLIC_SUBNET2_CIDR_BLOCK
   availability_zone = data.aws_availability_zones.available.names[1]
   map_public_ip_on_launch = "true"
   tags = {
-    Name = "${var.ENVIRONMENT}-levelup-vpc-public-subnet-2"
+    Name = "${var.ENVIRONMENT}-nkwo-vpc-public-subnet-2"
   }
 }
 
@@ -56,7 +56,7 @@ resource "aws_subnet" "nkwo_vpc_private_subnet_2" {
 }
 
 # internet gateway
-resource "aws_internet_gateway" "levelup_igw" {
+resource "aws_internet_gateway" "nkwo_igw" {
   vpc_id = aws_vpc.nkwo_vpc.id
 
   tags = {

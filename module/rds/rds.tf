@@ -8,7 +8,7 @@ module "nkwo-vpc" {
 }
 
 #Define Subnet Group for RDS Service
-resource "aws_db_subnet_group" "levelup-rds-subnet-group" {
+resource "aws_db_subnet_group" "nkwo-rds-subnet-group" {
 
     name          = "${var.ENVIRONMENT}-nkwo-db-snet"
     description   = "Allowed subnets for DB cluster instances"
