@@ -22,6 +22,7 @@ module "nkwo-webserver" {
 #Define Provider
 provider "aws" {
   region = var.AWS_REGION
+  profile = "munsa"
 }
 
 output "load_balancer_output" {
