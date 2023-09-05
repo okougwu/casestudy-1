@@ -1,10 +1,12 @@
-
+  name = "vpc-${var.ENVIRONMENT}"
+  cidr = "10.0.0.0/16"
 data "aws_availability_zones" "available" {
   state = "available"
 }
 
 # Main  vpc
 resource "aws_vpc" "nkwo_vpc" {
+  source  = "terraform-aws-modules/vpc/aws"
   cidr_block       = var.NKWO_VPC_CIDR_BLOC
   enable_dns_support = "true"
   enable_dns_hostnames = "true"
