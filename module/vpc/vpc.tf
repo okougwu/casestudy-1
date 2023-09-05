@@ -128,6 +128,7 @@ resource "aws_route_table_association" "to_private_subnet2" {
 
 provider "aws" {
   region     = var.AWS_REGION
+  profile    = "munsa"
 }
 
 #Output Specific to Custom VPC
