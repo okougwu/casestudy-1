@@ -11,27 +11,27 @@ variable "PUBLICLY_ACCESSIBLE" {
     default = "true"
 }
 
-variable "NKWO_RDS_USERNAME" {
+variable "LEVELUP_RDS_USERNAME" {
     default = "testdb"
 }
 
-variable "NKWO_RDS_PASSWORD" {
+variable "LEVELUP_RDS_PASSWORD" {
     default = "testdb12345"
 }
 
-variable "NKWO_RDS_ALLOCATED_STORAGE" {
+variable "LEVELUP_RDS_ALLOCATED_STORAGE" {
     type = string
     default = "20"
 }
 
-variable "NKWO_RDS_ENGINE" {
+variable "LEVELUP_RDS_ENGINE" {
     type = string
     default = "mysql"
 }
 
-variable "NKWO_RDS_ENGINE_VERSION" {
+variable "LEVELUP_RDS_ENGINE_VERSION" {
     type = string
-    default = "8.0.33"
+    default = "8.0.20"
 }
 
 variable "DB_INSTANCE_CLASS" {
