@@ -6,9 +6,6 @@ data "aws_availability_zones" "available" {
 
 # Main  vpc
 resource "aws_vpc" "nkwo_vpc" {
-  module "nkwo-vpc" {
-  source  = "terraform-aws-modules/vpc/aws"
-  version = "5.1.1"
   cidr_block       = var.NKWO_VPC_CIDR_BLOC
   enable_dns_support = "true"
   enable_dns_hostnames = "true"
