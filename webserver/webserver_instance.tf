@@ -1,9 +1,9 @@
-# module "nkwo-vpc" {
-#     source      = "../module/vpc"
+module "nkwo-vpc" {
+    source      = "../module/vpc"
 
-#     ENVIRONMENT = var.ENVIRONMENT
-#     AWS_REGION  = var.AWS_REGION
-# }
+    ENVIRONMENT = var.ENVIRONMENT
+    AWS_REGION  = var.AWS_REGION
+}
 
 module "nkwo-rds" {
     source      = "../module/rds"
