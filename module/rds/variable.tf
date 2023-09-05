@@ -31,7 +31,7 @@ variable "NKWO_RDS_ENGINE" {
 
 variable "NKWO_RDS_ENGINE_VERSION" {
     type = string
-    default = "8.1.0"
+    default = "8.0.33"
 }
 
 variable "DB_INSTANCE_CLASS" {
