@@ -66,7 +66,7 @@ resource "aws_internet_gateway" "nkwo_igw" {
 
 # ELastic IP for NAT Gateway
 resource "aws_eip" "nkwo_nat_eip" {
-  vpc      = true
+  domain      = vpc
   depends_on = [aws_internet_gateway.nkwo_igw]
 }
 
